@@ -1,5 +1,8 @@
-//preloader
+
 window.addEventListener("load", function(){
+    //wow
+    new WOW().init();
+    //preloader
     var load_screen = document.getElementById("load_screen");
     load_screen.style = 'opacity: 0;';
     function removePreloader() {
@@ -19,8 +22,7 @@ function hasTouch() {
         || navigator.msMaxTouchPoints > 0;
 }
 
-//wow
-new WOW().init();
+
 
 //buttons animation
 var telephone = $('#telephone');

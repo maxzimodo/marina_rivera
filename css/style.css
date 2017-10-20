@@ -1,0 +1,294 @@
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url(../fonts/roboto-condensed.regular.woff);
+}
+@font-face {
+    font-family: "Roboto Condensed Bold";
+    src: url(../fonts/roboto-condensed.bold.woff);
+}
+@font-face {
+    font-family: "Roboto Condensed Light";
+    src: url(../fonts/roboto-condensed.light.woff);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Roboto Condensed Light', sans-serif;
+    font-weight: normal;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h1, h2, h3 strong, b {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+}
+html, body {
+    font-size: 20px;
+    background-color: #FAFAFA;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.pic-wrapper {
+    overflow: hidden;
+    position: relative;
+    /*border-radius: 3px;*/
+}
+.pic-wrapper img {
+    position: absolute;
+    height: 101%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+.button:focus {
+    outline:none;
+}
+/*---------------------------------------------------header-----------------------------------------------------------*/
+header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+header .row {
+    width: 100%;
+}
+header, header a {
+    color: #fff;
+}
+header a {
+    vertical-align: middle;
+    display: inline-block;
+}
+header a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to bottom, rgba(0,1,1,0), rgba(0,1,1,0.2));
+    z-index: 0;
+}
+header span {
+    display: inline-block;
+}
+header .container {
+    height: 100vh;
+    position: relative;
+}
+header .row {
+    position: absolute;
+    bottom: 60px;
+    z-index: 1;
+}
+header .right-block .title {
+    font-size: 53px;
+    font-family: "Roboto Condensed Bold", sans-serif;
+    line-height: normal;
+    margin-bottom: 10px;
+    /*text-shadow: 0 0 70px #222222;*/
+    background: #241916;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+header .right-block .description {
+    margin-bottom: 10px;
+    font-size: 21px;
+    background: #241916;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+header .right-block button {
+    padding: 10px 20px;
+    background-color: #f74463;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+header .left-block .ball {
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 160px;
+    background-color: #4aa9ad;
+    padding: 30px;
+}
+header .left-block img.main-logo {
+    width: 130px;
+    height: auto;
+}
+header .left-block .description {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 10px 0 6px;
+}
+header .left-block img.phone-gadget {
+    width: 30px;
+    height: auto;
+    margin-right: 3px;
+}
+.phone-buzz {
+    -webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+/*---------------------------------------------------main-------------------------------------------------------------*/
+main .heading h2{
+    color: #f74463;
+    text-align: center;
+    font-family: "Roboto Condensed Bold", sans-serif;
+    padding: 20px;
+}
+h3 {
+    font-family: "Roboto Condensed Bold", sans-serif;
+}
+h5 {
+    margin-bottom: 0.3rem;
+}
+section {
+    margin: 30px 0;
+}
+section.item {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+section.item:last-child {
+    margin-bottom: 0;
+}
+main .line-heading {
+    color: #fff;
+    padding: 10px 0;
+    background-color: #4aa9ad;
+    display: block;
+    text-align: center;
+}
+.align {
+    text-align: right;
+}
+.catalog {
+    width: calc(100% - 90px);
+    margin: auto;
+}
+.catalog *:focus {
+    outline: none;
+}
+.slick-next:before {
+    content: '▶';
+    color: #f74463;
+}
+.slick-prev:before {
+    content: '◀';
+    color: #f74463;
+}
+.catalog .item img{
+    margin: auto;
+}
+.catalog .item .description {
+    text-align: center;
+    margin: 10px 20px;
+}
+.catalog .item .description span {
+    font-size: 15px;
+    display: inline-block;
+    line-height: inherit;
+}
+/*---------------------------------------------------footer-----------------------------------------------------------*/
+/*-----------------------------------------------------hvr-------------------------------------------------------------*/
+.hvr-ripple-out:before {
+    border: #f74463 solid 6px;
+    border-radius: 3px;
+}
+/*-------------------------------------------------preloader----------------------------------------------------------*/
+div#load_screen{
+    background: #fff;
+    opacity: 1;
+    position: fixed;
+    overflow: hidden;
+    z-index:10;
+    width: 100%;
+    height: 100%;
+    transition-property: opacity;
+    transition-duration: .7s;
+}
+div#load_screen .preloader-wheel {
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    margin: auto;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 1px solid #212529;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: cssload-spin 575ms infinite linear;
+    -o-animation: cssload-spin 575ms infinite linear;
+    -ms-animation: cssload-spin 575ms infinite linear;
+    -webkit-animation: cssload-spin 575ms infinite linear;
+    -moz-animation: cssload-spin 575ms infinite linear;
+}
+@keyframes cssload-spin {
+    100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+    100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+    100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+    100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+    100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+/*---------------------------------------------------media-queries----------------------------------------------------*/
+
+@media (max-width: 575px) {
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+

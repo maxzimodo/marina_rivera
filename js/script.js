@@ -15,15 +15,6 @@ window.addEventListener("load", function(){
 //parallax
 $('.parallax-window').parallax({imageSrc: 'img/main_pic.jpg'});
 
-//remove hover on mobile
-function hasTouch() {
-    return 'ontouchstart' in document.documentElement
-        || navigator.maxTouchPoints > 0
-        || navigator.msMaxTouchPoints > 0;
-}
-
-
-
 //buttons animation
 var telephone = $('#telephone');
 setInterval(function(){ buzzing() }, 4000);
@@ -33,23 +24,28 @@ function buzzing(){
     setTimeout(function(){ telephone.removeClass('phone-buzz'); }, 1000);
 };
 
-
-if (hasTouch()) { // remove all :hover stylesheets
-    try { // prevent exception on browsers not supporting DOM styleSheets properly
-        for (var si in document.styleSheets) {
-            var styleSheet = document.styleSheets[si];
-            if (!styleSheet.rules) continue;
-
-            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-                if (!styleSheet.rules[ri].selectorText) continue;
-
-                if (styleSheet.rules[ri].selectorText.match(':hover')) {
-                    styleSheet.deleteRule(ri);
-                }
-            }
-        }
-    } catch (ex) {}
-}
+// //remove hover on mobile
+// function hasTouch() {
+//     return 'ontouchstart' in document.documentElement
+//         || navigator.maxTouchPoints > 0
+//         || navigator.msMaxTouchPoints > 0;
+// }
+// if (hasTouch()) { // remove all :hover stylesheets
+//     try { // prevent exception on browsers not supporting DOM styleSheets properly
+//         for (var si in document.styleSheets) {
+//             var styleSheet = document.styleSheets[si];
+//             if (!styleSheet.rules) continue;
+//
+//             for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+//                 if (!styleSheet.rules[ri].selectorText) continue;
+//
+//                 if (styleSheet.rules[ri].selectorText.match(':hover')) {
+//                     styleSheet.deleteRule(ri);
+//                 }
+//             }
+//         }
+//     } catch (ex) {}
+// }
 
 
 $('.responsive').slick({
@@ -95,3 +91,13 @@ $('.responsive').slick({
         // instead of a settings object
     ]
 });
+
+$("[data-fancybox]").fancybox({
+    idleTime : 0,
+    loop     : true,
+    infobar : false,
+    buttons : [
+        'close'
+    ]
+});
+$.fancybox.defaults.animationEffect = "fade";

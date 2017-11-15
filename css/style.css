@@ -54,8 +54,17 @@ html, body {
     -ms-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
 }
-.button:focus {
-    outline:none;
+.button:focus, button.fancybox-button {
+    outline:none!important;
+}
+.fancybox-caption {
+    border-top: 0;
+}
+.list {
+    margin-left: 30px;
+}
+.mlo {
+    margin-bottom: 60px;
 }
 /*---------------------------------------------------header-----------------------------------------------------------*/
 header {
@@ -106,24 +115,25 @@ header .right-block .title {
     line-height: normal;
     margin-bottom: 10px;
     /*text-shadow: 0 0 70px #222222;*/
-    background: #241916;
+    background: #212629;
     padding: 10px 20px;
     border-radius: 3px;
 }
 header .right-block .description {
     margin-bottom: 10px;
     font-size: 21px;
-    background: #241916;
+    background: #212629;
     padding: 10px 20px;
     border-radius: 3px;
 }
-header .right-block button {
+header .right-block button, a.button {
     padding: 10px 20px;
     background-color: #f74463;
-    color: #fff;
+    color: #fff!important;
     border: none;
     cursor: pointer;
     border-radius: 3px;
+    display: inline-block;
 }
 header .left-block .ball {
     text-align: center;
@@ -187,9 +197,9 @@ main .line-heading {
     display: block;
     text-align: center;
 }
-.align {
-    text-align: right;
-}
+/*.align {*/
+    /*text-align: right;*/
+/*}*/
 .catalog {
     width: calc(100% - 90px);
     margin: auto;
@@ -205,8 +215,12 @@ main .line-heading {
     content: '◀';
     color: #f74463;
 }
+.catalog .item {
+    text-align: center;
+}
 .catalog .item img{
     margin: auto;
+    display: inline-block;
 }
 .catalog .item .description {
     text-align: center;
@@ -217,6 +231,11 @@ main .line-heading {
     display: inline-block;
     line-height: inherit;
 }
+/*.black-stripe {*/
+    /*background: #212629;*/
+    /*padding: 50px 0;*/
+    /*color: #fff;*/
+/*}*/
 /*---------------------------------------------------footer-----------------------------------------------------------*/
 /*-----------------------------------------------------hvr-------------------------------------------------------------*/
 .hvr-ripple-out:before {
